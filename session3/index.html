@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the registration form for joining Epic academy ....">
+    <link rel="icon" href="/images/favicon.webp">
+    <title>FORMS</title>
+</head>
+<body>
+    <main>
+        <!-- title  -->
+        <h2>Registration form(editing)</h2>
+        
+        <form>
+            <!-- personal details  -->
+             <!-- personal details(name,email,phone, age,gender)  -->
+             <div>
+                <label>Name:</label>
+                <input type="text" value="John" placeholder="Full name" required >
+             </div>
+             <br>
+             <div>
+                <label>Email:</label>
+                <input type="email" value="" placeholder="john@example.com" required >
+             </div>
+             <br>
+             <div>
+                <label>Phone:</label>
+                <input type="tel" value="+254712345678"  required disabled >
+             </div>
+             <br>
+             <div>
+                <label>AGE:</label>
+                <input type="number" min="15" max="100" value=""  required >
+             </div>
+             <br>
+             <div>
+                <p>Gender</p>
+                <label>
+                    <input type="radio" name="gender" value="MALE" checked >
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" >
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other" disabled>
+                    Other
+                </label>
+                
+             </div>
+             <br>
+             <div>
+                <label>SELECT COURSE</label>
+                <select name="course">
+                    <option value="">-- select --</option>
+                    <option value="Software development">Software development</option>
+                    <option value="Data science">Data science</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Data visualization">Data visualization</option>
+                </select>
+             </div>
+             <br>
+             <div>
+                <label>SELECT COURSE(SW)</label>
+                <select name="course" required>
+                    <optgroup label="Software Development">
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">backend</option>
+                        <option value="full stack">full stack</option>
+                    </optgroup>  
+                    <optgroup label="Data viz">
+                        <option value="opt1" disabled>OPT1</option>
+                        <option value="opt2">OPT2</option>
+                        <option value="opt3">OPT3</option>
+                        <option value="opt4">OPT4</option>
+                    </optgroup>                  
+                </select>
+             </div>
+             <br>
+             <div>
+                <label>Range:</label>
+                <input type="range" min="0"max="20" step="5">
+             </div>
+             <br>
+             <div>
+                <label>Upload Profile</label>
+                <input type="file" accept="image/*" multiple>
+             </div>
+             <br>
+             <div>
+                <label>Pick Color</label>
+                <input type="color" value="" >
+             </div>
+             <div>
+                <input type="hidden" name="user_id" value="50" >
+             </div>
+             <div>
+                <label>Datetime-local</label>
+                <input type="datetime-local"  >
+             </div>
+             <div>
+                <label>Date</label>
+                <input type="date"  >
+             </div>
+             <br>
+             <div>
+                <label>Description</label>
+                <textarea
+                name="description"
+                placeholder="Enter Description"
+                rows="10"
+                cols="80"
+               
+                ></textarea>
+             </div>
+             <br>
+             <div>
+                <label><input name="term" type="checkbox" value="agree">  I agree to the terms and conditions , privacy-policy</label>
+             </div>
+             <br>
+             <div>
+                <div>
+                    <p>Hobbies</p>
+                    <label><input name="hobby" type="checkbox" value="coding" checked> Coding</label>
+                    <label><input name="hobby" type="checkbox" value="reading"> Reading</label>
+                    <label><input name="hobby" type="checkbox" value="Music"> Music</label>
+                    <label><input name="hobby" type="checkbox" value="Travel" disabled> Travel</label>
+
+                </div>
+                
+             </div>
+             <br>
+
+
+             <button type="submit">Submit form</button>
+             <button type="reset">reset</button>
+             <!-- needs instruction or function  -->
+             <button type="button">button</button>
+
+        </form>
+    
+     
+      <!-- course selection(software, data science, and cloud computing)  -->
+    <!-- notes  -->
+     <!-- terms and conditions and privacy-policies  -->
+    </main>
+
+    
+</body>
+</html>
