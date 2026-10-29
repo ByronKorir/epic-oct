@@ -1,0 +1,22 @@
+
+#test{
+    padding: 20px;
+    /* position: relative; */
+    background: #dbd5d5;
+    z-index: 11;
+}
+
+.a{
+    width: 200px;
+    background-color: blue;
+    z-index: 1;
+    position: relative;
+    margin: 10px;
+}
+.b{
+    background-color: green;
+    z-index: 3;
+    position: relative;
+    margin:10px;
+    width: 200px;
+}
