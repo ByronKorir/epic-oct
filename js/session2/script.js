@@ -113,10 +113,81 @@ console.log(fruits,'APPLES REMOVED - FROM THE FRONT')
 fruits.pop()
 console.log(fruits,"-Water melon removed to the end -")
 
-const numbers = [23,13,2,54,76,1]
-console.log(numbers.indexOf(1))
+const num = [1,2,3,10,23,13,142,4,5,6,7]
+console.log(num.indexOf(1))
 console.log(fruits.indexOf("orange"))
 
+// major aray methods 
+console.log("===> ARRAY METHODS <===")
+//forEach
+num.forEach((n) => console.log(n))
+//map
+const double = num.map(n => n*2)
+console.log("double:",double)
+//filter
+const odd = num.filter((n) => n % 2 !== 0)
+console.log("ODD:",odd)
+//find
+const firstBig = num.find((n) => n > 3) //returns the first that meets the criteria
+console.log("find:",firstBig)
+//reduce
+const cart = num.reduce((sum, n)=> sum+n,0);
+console.log("redduce:", cart)
+const sort = num.sort((a,b)=> a - b)
+console.log("sort:",sort)
 
 
 // OBJECTS
+console.log("======== OBJECTS =======")
+const student = {
+    name: "Amina",
+    age: 20,
+    courses: ["HTML", "CSS"],
+    address: { city: "Nairobi", country: "Kenya" },
+    greet() { return `Hi, I'm ${this.name}`; }
+    };
+console.log(student)
+console.log(student.age)
+console.log(student["age"])
+console.log(student.courses[0])
+console.log(student.address.country)
+console.log(student.greet())
+student.name = "Byron" // update
+student.admission = "001" // add/insert
+delete student.age //remove a key
+
+console.log(student)
+const studentKeys = Object.keys(student)
+console.group(studentKeys)
+const studentValues = Object.values(student)
+console.group(studentValues)
+const studentArray = Object.entries(student)
+console.log(studentArray)
+
+// DESTRUCTURING 
+console.log("====> destructuring <====")
+
+const {name, age, courses, admission} = student
+console.log(name,age,admission)
+
+// spread - a copy
+const languages = ["HTML","CSS","JS"]
+console.log(languages)
+const newLanguages = [...languages,"Python"]
+console.log(newLanguages)
+
+const updatedStudent = {...student,name:"James"}
+console.log(updatedStudent)
+
+// Rest parameters -- Gatther or aggregate together
+function sum(...numbers){
+ return numbers.reduce((sum,n) => sum+n,0);
+}
+console.log(sum(1,2,3,4,23,23))
+
+console.log(student.address?.postalCode?? "NO POSTAL CODE")
+console.log(typeof student)
+const jsonStudent = JSON.stringify(student) // obj -> json string
+console.log(jsonStudent)//json string
+const obj = JSON.parse(jsonStudent) // json -> object
+console.log(obj)
