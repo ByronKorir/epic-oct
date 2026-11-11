@@ -1,0 +1,181 @@
+/* ---------- Reset & base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --border: #e5e7eb;
+  --radius: 12px;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---------- Dark mode (toggled via .dark on <body>) ---------- */
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+}
+
+/* ---------- Layout ---------- */
+.site-header {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+.btn:hover { opacity: 0.9; }
+.btn:active { transform: scale(0.97); }
+
+.btn-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.btn-small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--danger);
+  background: transparent;
+  color: var(--danger);
+  cursor: pointer;
+}
+
+/* ---------- Section 1 ---------- */
+.text { margin-bottom: 0.5rem; }
+.box {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.box.active {
+  border-color: var(--accent);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+/* ---------- Lists ---------- */
+.list { list-style: none; margin-top: 0.75rem; }
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: var(--bg);
+}
+
+/* ---------- Counter ---------- */
+.counter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.counter.negative { color: var(--danger); }
+
+/* ---------- Forms ---------- */
+.form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.form input {
+  flex: 1;
+  min-width: 200px;
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+.form input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* ---------- Status & quote ---------- */
+.muted { color: var(--muted); font-size: 0.9rem; }
+.status { margin-top: 0.5rem; color: var(--muted); font-style: italic; }
+
+.quote {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--bg);
+  border-radius: 6px;
+  font-style: italic;
+}
+.quote footer { margin-top: 0.5rem; font-style: normal; color: var(--muted); }
+
+/* ---------- Users grid ---------- */
+.users-grid {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.user-card {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.user-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+.user-card p { font-size: 0.85rem; color: var(--muted); }

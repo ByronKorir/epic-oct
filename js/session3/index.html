@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session 9 · DOM, Events, localStorage & Fetch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 id="title">Session 9 Playground</h1>
+    <button id="theme-toggle" class="btn">🌙 Dark mode</button>
+  </header>
+
+  <main class="container">
+
+    <!-- ============ 1. DOM BASICS ============ -->
+    <section class="card">
+      <h2>1. DOM Basics</h2>
+      <p class="text">First paragraph.</p>
+      <p class="text">Second paragraph.</p>
+      <div id="dom-target" class="box">I can be changed.</div>
+      <div class="btn-row">
+        <button id="change-text" class="btn">Change text</button>
+        <button id="toggle-active" class="btn">Toggle .active</button>
+        <button id="add-box" class="btn">Create element</button>
+      </div>
+    </section>
+
+    <!-- ============ 2. EVENTS + DELEGATION ============ -->
+    <section class="card">
+      <h2>2. Events & Delegation</h2>
+      <button id="click-me" class="btn">Click me</button>
+      <ul id="delegation-list" class="list">
+        <li>Item A <button class="delete btn-small">Delete</button></li>
+        <li>Item B <button class="delete btn-small">Delete</button></li>
+        <li>Item C <button class="delete btn-small">Delete</button></li>
+      </ul>
+    </section>
+
+    <!-- ============ 3. COUNTER (State → Render) ============ -->
+    <section class="card">
+      <h2>3. Counter</h2>
+      <p id="counter-value" class="counter">0</p>
+      <div class="btn-row">
+        <button id="dec" class="btn">−</button>
+        <button id="reset" class="btn">Reset</button>
+        <button id="inc" class="btn">+</button>
+      </div>
+    </section>
+
+    <!-- ============ 4. FORMS ============ -->
+    <section class="card">
+      <h2>4. Forms</h2>
+      <form id="note-form" class="form">
+        <input id="note-input" type="text" placeholder="Type a note…" autocomplete="off" />
+        <button type="submit" class="btn">Add</button>
+      </form>
+      <div id="s">
+
+      </div>
+      <ul id="notes" class="list"></ul>
+    </section>
+
+    <!-- ============ 5. localStorage ============ -->
+    <section class="card">
+      <h2>5. localStorage</h2>
+      <p class="muted">Notes above are saved automatically. Refresh to test!</p>
+      <button id="clear-storage" class="btn">Clear saved notes</button>
+    </section>
+
+    <!-- ============ 6. FETCH ============ -->
+    <section class="card">
+      <h2>6. Fetch a Random Quote</h2>
+      <button id="load-quote" class="btn">Quote of the moment</button>
+      <p id="quote-status" class="status"></p>
+      <blockquote id="quote" class="quote"></blockquote>
+    </section>
+
+    <!-- ============ 7. FETCH USERS (exercise) ============ -->
+    <section class="card">
+      <h2>7. Fetch Users (Exercise)</h2>
+      <button id="load-users" class="btn">Load users</button>
+      <p id="users-status" class="status"></p>
+      <div id="users" class="users-grid"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
